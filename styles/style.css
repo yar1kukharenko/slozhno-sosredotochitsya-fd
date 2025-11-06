@@ -1,5 +1,324 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+    background-image: var(--page-background-image);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    min-block-size: 100dvb;
+    background-color: var(--page-background-color, #FFF1F7);
+    padding: 0 10px;
+}
+
+
+.header {
+    height: 100dvb;
+    min-height: 668px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, min-content);
+    padding: 10px 0;
+
+}
+
+
+.header__theme-menu {
+    justify-self: end;
+    margin-top: 3.988rem;
+}
+
+.header__theme-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.725rem;
+}
+
+.header__theme-menu-button {
+    text-transform: lowercase;
+    font-size: var(--text-font-size, 1.125rem);
+    background: transparent;
+    padding: 0.094rem 0.813rem;
+    line-height: 100%;
+    color: var(--accent-color);
+    border: 1px solid transparent;
+
+}
+
+.header__theme-menu-button_active {
+    border: 1px solid currentColor;
+}
+
+.header__title {
+
+    margin-top: 4.363rem;
+}
+
+
+.header__description {
+    margin-top: 3.438rem;
+
+}
+
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+.content__title {
+    font-size: var(--text-font-size);
+    color: var(--content-title-color);
+}
+
+.content__subtitle {
+    margin-block-end: 10px;
+}
+
+
+.section-topic--stress {
+    margin-block-start: 2.5rem;
+}
+
+.section-topic--advice .content__subtitle {
+    margin-block-end: 20px;
+}
+
+.section-topic--advice .content__subtitle--regular {
+    margin-block-end: 10px;
+}
+
+
+.section-topic--images {
+    gap: 0;
+}
+
+
+.content__subtitle--regular {
+    font-weight: 400;
+}
+
+.footer {
+    height: 100dvb;
+    min-height: 668px;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 10px 0;
+
+
+}
+
+
+.footer__text {
+    place-self: center;
+    line-height: 83%;
+    text-shadow: 2px 2px 0 var(--accent-color, #FF8DCBFF);
+
+}
+
+.image-grid {
+    inline-size: 100%;
+    block-size: 100%;
+    max-block-size: 100%;
+    object-fit: cover;
+
+}
+
+.rec-icon {
+    color: var(--accent-color, #FF0070);
+    line-height: 1.38;
+    letter-spacing: 0;
+    font-size: var(--text-font-size, 1.125rem);
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.rec-icon::after {
+    content: "";
+    color: var(--accent-color, #FF0070);
+    width: 9px;
+    height: 9px;
+    border-radius: 100%;
+    background: var(--accent-color, #FF0070);
+    box-shadow: 0 0 4px 2px currentColor;
+
+}
+
+
+@media screen and (width >= 768px) {
+    .page {
+        padding: 0 20px;
+    }
+
+    .header {
+        min-height: 1024px;
+        grid-template-columns: 1fr 1fr;
+        padding: 20px 0;
+    }
+
+    .header__theme-menu {
+        grid-column: 2;
+        margin-top: 10.8rem;
+    }
+
+    .header__title {
+        grid-column: 1 / -1;
+        margin-top: 11.113rem;
+        margin-left: -20px;
+    }
+
+    .header__description {
+        grid-column: 2;
+        margin-top: 10.125rem;
+    }
+
+    .section-topic {
+        grid-template-columns: minmax(236px, 1fr) repeat(2, 1fr)
+
+
+    }
+
+    .section-topic--stress {
+        margin-block-start: 3.55rem;
+    }
+
+    .section-topic--stress .section-topic__item {
+        --item-column-start: 2;
+        --item-column-end: -1;
+    }
+
+    .section-topic--distractions .section-topic__item {
+        --item-column-start: 1;
+        --item-column-end: -1;
+    }
+
+    .section-topic--advice > .content__subtitle {
+        --item-column-start: 2;
+        --item-column-end: -1;
+    }
+
+    .section-topic--advice .section-topic__item {
+        --item-column-start: 2;
+        --item-column-end: -1;
+    }
+
+    .section-topic--images .content__subtitle {
+        --item-column-start: 1;
+        --item-column-end: -1;
+        margin-bottom: 20px;
+    }
+
+    .image-grid-container {
+        --item-column-start: 1;
+        --item-column-end: -1;
+        --column-count: 3;
+        gap: 20px;
+    }
+
+
+    .image-grid-sunset {
+        --item-column-start: 1;
+        --item-column-end: 3;
+        --item-row-start: 1;
+        --item-row-end: 1;
+    }
+
+    .image-grid-ice_cream {
+        --item-column-start: 3;
+        --item-column-end: -1;
+        --item-row-start: 1;
+        --item-row-end: 3;
+    }
+
+    .image-grid-tape {
+        --item-column-start: 1;
+        --item-column-end: 1;
+        --item-row-start: 2;
+        --item-row-end: 4;
+    }
+
+    .image-grid-books {
+        --item-column-start: 2;
+        --item-column-end: 2;
+        --item-row-start: 2;
+        --item-row-end: 2;
+    }
+
+    .image-grid-street {
+        --item-column-start: 2;
+        --item-column-end: -1;
+        --item-row-start: 3;
+        --item-row-end: 3;
+    }
+
+    .footer {
+        min-height: 1024px;
+    }
+
+    .section-topic--images {
+        margin-block-end: 60px;
+    }
+
+
+    .rec-icon {
+        color: var(--accent-color, #FF0070);
+        line-height: 1.38;
+        letter-spacing: 0;
+        font-size: var(--text-font-size, 1.125rem);
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+}
+
+@media screen and (width >= 1024px) {
+    .header {
+        min-height: 768px;
+    }
+
+    .header__theme-menu {
+        justify-self: center;
+        margin-top: 0;
+        grid-column: 1 / -1;
+    }
+
+    .header__theme-menu-list {
+        flex-direction: row;
+    }
+
+    .section-topic--stress {
+        margin-block-start: 3.75rem;
+    }
+
+
+    .header__title {
+        margin-top: 17.263rem;
+    }
+
+    .header__description {
+        margin-top: 7.125rem;
+    }
+
+    .section-topic--distractions .section-topic__item {
+        grid-column: span 1;
+        --item-row-start: 2;
+        --item-row-end: 2;
+
+    }
+
+    .footer {
+        min-height: 768px;
+    }
+
+
 }
