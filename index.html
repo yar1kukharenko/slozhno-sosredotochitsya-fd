@@ -9,7 +9,8 @@
 	<link href="images/favicon.ico" rel="icon" sizes="any"/>
 	<link href="images/favicon.svg" rel="icon" type="image/svg+xml"/>
 	<link href="images/mobile-icon.png" rel="apple-touch-icon"/>
-	<script src="./scripts/script.js"></script>
+	<script defer src="./scripts/script.js"></script>
+	<link href="./fonts/fonts.css" rel="stylesheet"/>
 	<link href="./styles/variables.css" rel="stylesheet"/>
 	<link href="./styles/globals.css" rel="stylesheet"/>
 	<link href="./styles/style.css" rel="stylesheet"/>
@@ -130,6 +131,7 @@
 				затем нужно, чтобы вернуться к работе.
 			</p>
 		</article>
+
 	</section>
 
 	<section class="section-topic section-topic--advice grid-container">
@@ -142,9 +144,9 @@
 			<h3 class="content__subtitle title-decor grid-item">
 				5 простых (на самом деле не очень) советов
 			</h3>
-			<h3 class="content__subtitle title-decor content__subtitle--regular">
+			<h4 class="content__subtitle title-decor content__subtitle--regular">
 				Представьте небо и облака
-			</h3>
+			</h4>
 			<p>
 				Или листья в ручье. Тут дело в лёгкой медитации, которая помогает
 				успокоиться. Ведь часто именно тревожные мысли о сложных задачах как
@@ -157,9 +159,9 @@
 			</p>
 		</article>
 		<article class="grid-item section-topic__item">
-			<h3 class="content__subtitle title-decor content__subtitle--regular">
+			<h4 class="content__subtitle title-decor content__subtitle--regular">
 				Включите музыку
-			</h3>
+			</h4>
 			<p>
 				Но не любую, и не любимую. Любимая может быть связана с сильными
 				положительными эмоциями, которые тоже очень сильно отвлекают.
@@ -168,9 +170,9 @@
 			</p>
 		</article>
 		<article class="grid-item section-topic__item">
-			<h3 class="content__subtitle title-decor content__subtitle--regular">
+			<h4 class="content__subtitle title-decor content__subtitle--regular">
 				Прогуляйтесь
-			</h3>
+			</h4>
 			<p>
 				Или даже пробегитесь. Лучше найти парк или лес: один эксперимент
 				<a
@@ -186,9 +188,9 @@
 			</p>
 		</article>
 		<article class="grid-item section-topic__item">
-			<h3 class="content__subtitle title-decor content__subtitle--regular">
+			<h4 class="content__subtitle title-decor content__subtitle--regular">
 				Хорошо ешьте
-			</h3>
+			</h4>
 			<p>
 				Мы — не ваша бабушка, но это правда важно. Выбирайте продукты,
 				которые препятствуют резким скачкам сахара в крови. Например, с
@@ -197,9 +199,9 @@
 			</p>
 		</article>
 		<article class="grid-item section-topic__item">
-			<h3 class="content__subtitle title-decor content__subtitle--regular">
+			<h4 class="content__subtitle title-decor content__subtitle--regular">
 				Читайте
-			</h3>
+			</h4>
 			<p>
 				Настоящие бумажные книги. Это правда помогает с концентрацией: чтобы
 				прочитать пост в соцсети, достаточно нескольких минут или даже
@@ -210,46 +212,56 @@
 	</section>
 
 	<section class="section-topic section-topic--images grid-container">
-		<h3 class="content__subtitle title-decor grid-item">
+		<h2 class="content__subtitle title-decor grid-item">
 			А можно в картинках?
-		</h3>
-		<div class="image-grid-container grid-container grid-item">
-			<img
-					alt="Закат"
-					class="image-grid image-grid-sunset grid-item"
-					loading="lazy"
-					src="images/sunset.png"
-			/>
-			<img
-					alt="Мороженое"
-					class="image-grid image-grid-ice_cream grid-item"
-					loading="lazy"
-					src="images/ice-cream.png"
-			/>
-			<img
-					alt="Кассета"
-					class="image-grid image-grid-tape grid-item"
-					loading="lazy"
-					src="images/tape.png"
-			/>
-			<img
-					alt="Книги"
-					class="image-grid image-grid-books grid-item"
-					loading="lazy"
-					src="images/books.png"
-			/>
-			<img
-					alt="Улица"
-					class="image-grid image-grid-street grid-item"
-					loading="lazy"
-					src="images/street.png"
-			/>
-		</div>
+		</h2>
+		<ul class="image-grid-container grid-container grid-item">
+			<li class="image-grid-sunset grid-item">
+				<img
+						alt="Закат"
+						class="image-grid"
+						loading="lazy"
+						src="images/sunset.png"
+				/>
+			</li>
+			<li class="image-grid-ice_cream grid-item">
+				<img
+						alt="Мороженое"
+						class="image-grid"
+						loading="lazy"
+						src="images/ice-cream.png"
+				/>
+			</li>
+			<li class="image-grid-tape grid-item">
+				<img
+						alt="Кассета"
+						class="image-grid"
+						loading="lazy"
+						src="images/tape.png"
+				/>
+			</li>
+			<li class="image-grid-books grid-item">
+				<img
+						alt="Книги"
+						class="image-grid"
+						loading="lazy"
+						src="images/books.png"
+				/>
+			</li>
+			<li class="image-grid-street grid-item">
+				<img
+						alt="Улица"
+						class="image-grid"
+						loading="lazy"
+						src="images/street.png"
+				/>
+			</li>
+		</ul>
 	</section>
 </main>
 
 <footer class="footer decorated-zone">
-	<span class="footer__text decorated_text">focus</span>
+	<h5 class="footer__text decorated_text">focus</h5>
 </footer>
 </body>
 </html>

@@ -12,4 +12,5 @@
     --accent-color: #FF0070;
     --text-title-decor-color: #000028;
     --content-title-color: var(--accent-color);
+    --button-border-color: #FF007066;
 }
