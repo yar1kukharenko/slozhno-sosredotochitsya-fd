@@ -14,3 +14,8 @@
     --content-title-color: var(--accent-color);
     --button-border-color: #FF007066;
 }
+
+
+:root.theme-dark .rec-icon {
+    display: flex;
+}

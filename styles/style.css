@@ -78,6 +78,10 @@
     margin-block-end: 10px;
 }
 
+.section-topic__item p {
+    margin-top: 10px;
+}
+
 .decorated-zone {
     position: relative;
 }
